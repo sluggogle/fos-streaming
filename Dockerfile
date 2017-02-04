@@ -23,7 +23,8 @@ RUN sudo sh -c 'echo "nameserver 8.8.8.8" >> /etc/resolv.conf'
 
 # Installing Stuff
 RUN sudo apt-get update > /dev/null 2>&1
-RUN sudo apt-get install -y wget curl git make build-essential unzip openssl librtmp0 librtmp-dev libjpeg8 > /dev/null 2>&1
+#RUN sudo apt-get install -y wget curl git make build-essential unzip openssl librtmp0 librtmp-dev libjpeg8 > /dev/null 2>&1
+RUN sudo apt-get install -y wget curl git make build-essential unzip openssl librtmp0 librtmp-dev libjpeg8
 
 ADD /provision $PROVISION_DIR
 RUN . $PROVISION_DIR/nginx.sh
